@@ -1,0 +1,18 @@
+tbody {
+    width: 100%;
+}
+
+table.racer_table {
+  height: 50px;
+  width: 100%;
+}
+
+
+td {
+    height: 1em;
+    width: 2.4%;
+}
+
+img {
+	zoom: 1.5;
+}
