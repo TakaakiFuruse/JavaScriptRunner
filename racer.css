@@ -31,3 +31,7 @@ img#player2 {
     margin-left: 0%;
     margin-top: 1%
 }
+
+.winner p {
+    text-align: center;
+}
