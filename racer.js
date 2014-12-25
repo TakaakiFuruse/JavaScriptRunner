@@ -1,15 +1,3 @@
-// $("img#player1").animate({'margin-left': '+=0.5%'}, 100);
-// $("img#player2").animate({'margin-left': '+=0.5%'}, 100);
-
-// p-c
-
-// player 1
-// player 2
-
-// push key -> move forward -> goal
-
-//initialize
-
 function player (playerNum) {
   this.image = "img#player" + playerNum;
   this.flag = "img#flag_p" + playerNum;
@@ -23,10 +11,16 @@ player.prototype.move = function() {
   $(this.image).animate({"margin-left": "+=1%"}, 100);
 };
 
+var positionToInteger = function (object) {
+	return parseInt(
+  $(object).css("margin-left").replace("px", "")
+  );
+}
+
 player.prototype.playerGoal = function() {
   // when player touched flag. He won. 
-  playerPosition = $(this.image).css("margin-left");
-  flagPosition = $(this.flag).css("margin-left");
+  playerPosition = positionToInteger(this.image);
+  flagPosition = positionToInteger(this.flag);
   if (playerPosition >= flagPosition){this.win = true;}
 };
 
@@ -44,3 +38,28 @@ player.prototype.reset = function() {
 
 
 // view
+$(document).ready(function() {
+
+var unbindKey = function () {
+	if (player1.win === true || player2.win === true) {
+	Mousetrap.unbind("f");
+	Mousetrap.unbind("j");
+	}
+};
+
+var game = function (playerName, keyToBind) {
+		Mousetrap.bind(keyToBind, function() {
+		playerName.move();
+		playerName.playerGoal();
+		unbindKey();
+		playerName.congratsWinner();
+	});
+}
+
+var player1 = new player(1);
+var player2 = new player(2);
+
+game(player1, "f");
+game(player2, "j");
+
+});
