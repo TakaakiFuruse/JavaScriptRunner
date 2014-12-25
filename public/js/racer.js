@@ -37,29 +37,3 @@ player.prototype.reset = function() {
  };
 
 
-// view
-$(document).ready(function() {
-
-var unbindKey = function () {
-	if (player1.win === true || player2.win === true) {
-	Mousetrap.unbind("f");
-	Mousetrap.unbind("j");
-	}
-};
-
-var game = function (playerName, keyToBind) {
-		Mousetrap.bind(keyToBind, function() {
-		playerName.move();
-		playerName.playerGoal();
-		unbindKey();
-		playerName.congratsWinner();
-	});
-}
-
-var player1 = new player(1);
-var player2 = new player(2);
-
-game(player1, "f");
-game(player2, "j");
-
-});
