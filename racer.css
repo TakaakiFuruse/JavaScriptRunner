@@ -2,6 +2,11 @@ tbody {
     width: 100%;
 }
 
+img#flag_p1, img#flag_p2{
+    margin-left: 98%;
+    margin-top: -3%;
+}
+
 table.racer_table {
   height: 50px;
   width: 100%;

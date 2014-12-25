@@ -1,9 +1,10 @@
-// $("td.player2_place").before("<td></td>")
-// $("tr#player2_strip td:last-child").remove()
+// $("img#player1").animate({'margin-left': '+=0.5%'}, 100);
+// $("img#player2").animate({'margin-left': '+=0.5%'}, 100);
 
-p-code
+// p-code
 
-player 1
-player 2
+// player 1
+// player 2
 
-push key -> move forward -> goal 
+// push key -> move forward -> goal 
+
