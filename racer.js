@@ -8,3 +8,6 @@
 
 // push key -> move forward -> goal 
 
+function player (argument) {
+  // body...
+}

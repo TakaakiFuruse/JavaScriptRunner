@@ -21,3 +21,7 @@ td {
 img {
 	zoom: 1.5;
 }
+
+img#player1 {
+    margin-left: 1%;
+}
