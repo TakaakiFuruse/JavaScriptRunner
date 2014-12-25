@@ -28,7 +28,7 @@ img#player2 {
 
 .winner p {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .spacer1 {
@@ -36,5 +36,5 @@ img#player2 {
 }
 
 .spacer2 {
-    margin-top: 40%;
+    margin-top: 35%;
 }
