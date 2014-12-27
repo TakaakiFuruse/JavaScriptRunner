@@ -1,12 +1,13 @@
-// return false if one player goals.
-$GAME = true;
-
-function player (playerNum, keyBind) {
+function player (playerNum, keyBind, playerName) {
   this.image = "img#player" + playerNum;
   this.flag = "img#flag_p" + playerNum;
+
   this.win = false;
   this.playerNum = playerNum;
-  this.keyBind = keyBind
+  this.playerName = playerName;
+  this.raptime;
+
+  this.keyBind = keyBind;
 }
 
 // controller
@@ -36,7 +37,7 @@ player.prototype.playerGoal = function() {
 player.prototype.congratsWinner = function() {
   // display who won
   if (this.win === true && $GAME === false) { 
-  	$(".winner p").append("Player " + this.playerNum +  " WIN!!");
+  	$(".winner p").append(this.playerName +  " WIN!!");
   }
 };
 
@@ -46,7 +47,6 @@ player.prototype.reset = function() {
  };
 
 player.prototype.unbindKey = function () {
-  console.log("test");
   if ($GAME === false) {
     Mousetrap.unbind(this.keyBind,'keyup');
   }

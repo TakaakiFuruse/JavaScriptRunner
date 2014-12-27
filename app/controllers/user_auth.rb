@@ -8,14 +8,6 @@ get '/login' do
   erb :'/login'
 end
 
-#user welcome
-get '/welcome' do
-  @login_user = User.find(session[:user_id])
-  erb :'/index_login_welcome'
-end
-
-
-
 #login
 post '/login' do
   user = User.find_by(name: params[:user][:name]).try(:authenticate, params[:user][:password])

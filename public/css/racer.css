@@ -13,7 +13,7 @@ img#flag_p1, img#flag_p2{
 
 
 img {
-	zoom: 1.5;
+  zoom: 1.5;
 }
 
 img#player1 {
@@ -32,9 +32,13 @@ img#player2 {
 }
 
 .spacer1 {
-    margin-top: 1%;
+    margin-top: 10%;
 }
 
 .spacer2 {
-    margin-top: 40%;
+    margin-top: 29%;
+}
+
+.winner {
+    height: 3em;
 }
