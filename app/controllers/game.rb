@@ -11,5 +11,9 @@ end
 
 get '/racer/results' do
   @game_result = Game.create(params)
+end
 
+get '/racer/scores' do
+  @all_result = Game.all
+  erb :'/score', :layout => false
 end
