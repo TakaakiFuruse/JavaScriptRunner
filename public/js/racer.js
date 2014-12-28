@@ -5,24 +5,24 @@ function player (playerNum, keyBind, playerName) {
   this.win = false;
   this.playerNum = playerNum;
   this.playerName = playerName;
-  this.raptime;
 
   this.keyBind = keyBind;
 }
 
 // controller
+
+var positionToInteger = function (object) {
+	return parseInt(
+  $(object).css("margin-left").replace("px", "")
+  );
+};
+
 player.prototype.move = function() {
   // move image px by px
   if ($GAME === true){
     $(this.image).animate({"margin-left": "+=1%"}, 100);
   }
 };
-
-var positionToInteger = function (object) {
-	return parseInt(
-  $(object).css("margin-left").replace("px", "")
-  );
-}
 
 player.prototype.playerGoal = function() {
   // when player touched flag. He won. 
@@ -51,5 +51,4 @@ player.prototype.unbindKey = function () {
     Mousetrap.unbind(this.keyBind,'keyup');
   }
 };
-
 
