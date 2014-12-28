@@ -19,18 +19,15 @@ function player (playerNum, keyBind, playerName) {
     }, 'keyup');
   };
 
-  var reset = function() {
+  var resetScreen = function() {
    // get players back to start line
-     $(player1).css("margin-left", "0px");
-     $(player2).css("margin-left", "0px");
-     $(".winner p").remove();
-     $("table").remove();
-     // here set timer equal 0
+   // need future implementation
+   location.reload();
    };
 
 
   var linkToResetAndScore = function (argument) {
-    linkToReset = "<a href=\"javascript\:reset\(\)\;\">Try again   |</a>"
+    linkToReset = "<a href=\"javascript\:resetScreen\(\)\;\">Try again   |</a>"
     linkToScore = "<a href=\"javascript\:getScoreFromServer\(\)\;\">   Show Score</a>"
     return linkToReset + linkToScore
   }
