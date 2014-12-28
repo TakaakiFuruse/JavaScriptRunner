@@ -1,12 +1,3 @@
-var game = function (playerObj, keyBind) {
-    Mousetrap.bind(keyBind, function() {
-    playerObj.playerGoal();
-    playerObj.unbindKey();
-    playerObj.congratsWinner();
-    playerObj.move();
-  }, 'keyup');
-};
-
 $(document).ready(function() {
 
 // return false if one player goals.

@@ -1,4 +1,3 @@
-
 #user welcome
 get '/welcome' do
   @login_user = User.find(session[:user_id])
@@ -8,4 +7,9 @@ end
 # play a game
 get '/racer' do
   erb :'/racer'
+end
+
+get '/racer/results' do
+  @game_result = Game.create(params)
+
 end
