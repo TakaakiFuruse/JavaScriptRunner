@@ -1,5 +1,6 @@
 <div class="scores">
-  <table>
+  <div class="scores_left_spacer"></div>
+    <table>
     <% @all_result.each do |el| %>  
     <tr>
       <td><%= el[:id] %></td>
@@ -8,4 +9,6 @@
     </tr>
     <% end  %>  
   </table>
+
+  <div class="scores_right_spacer"></div>
 </div>

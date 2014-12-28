@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 // return false if one player goals.
 
 var player1 = new player(1, "f", $PLAYER1_NAME);

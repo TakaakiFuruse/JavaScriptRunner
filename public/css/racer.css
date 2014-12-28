@@ -1,5 +1,9 @@
 html {
-    background: url(../img/background.jpg);
+}
+
+body {
+  background-image: url('../img/back4.jpg');
+  background-size: cover;
 }
 
 tbody {
@@ -7,7 +11,7 @@ tbody {
 }
 
 img#flag_p1, img#flag_p2{
-    margin-left: 98%;
+    margin-left: 98%; 
     margin-top: -4%;
     float: right;
 }
@@ -33,13 +37,40 @@ img#player2 {
 }
 
 .spacer1 {
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .spacer2 {
-    margin-top: 29%;
+    margin-top: 34%;
 }
 
 .winner {
-    height: 3em;
+    height: auto;
+    width: auto;
+}
+
+td {
+    width: 30%;
+    height: 30%;
+    font-size: 1.5em;
+}
+
+.scores {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+td {
+    width: 30%;
+    height: 30%;
+    font-size: 1.5em;
+}
+
+.scores_left_spacer {
+    width: 40%;
+}
+
+.scores_right_spacer {
+    width: 40%;
 }

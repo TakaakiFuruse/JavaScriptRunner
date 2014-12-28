@@ -23,9 +23,27 @@ function player (playerNum, keyBind, playerName) {
    // get players back to start line
      $(player1).css("margin-left", "0px");
      $(player2).css("margin-left", "0px");
+     $(".winner p").remove();
+     $("table").remove();
      // here set timer equal 0
    };
 
+
+  var linkToResetAndScore = function (argument) {
+    linkToReset = "<a href=\"javascript\:reset\(\)\;\">Try again   |</a>"
+    linkToScore = "<a href=\"javascript\:getScoreFromServer\(\)\;\">   Show Score</a>"
+    return linkToReset + linkToScore
+  }
+
+  var getScoreFromServer = function () {
+    $.ajax({
+      url: '/racer/scores',
+      type: 'GET',
+    })
+    .done(function(event) {
+      $('.next_screen').before(event);
+    });
+  }
 
 // game controller
 
@@ -58,7 +76,8 @@ function player (playerNum, keyBind, playerName) {
     if (this.win === true && $GAME === false) { 
     	$(".winner p").append(
                             this.playerName + 
-                            " WIN!!" + "<br><a href=\"javascript\:reset\(\)\;\">Try again   |</a><a href=\"\">   Show Score</a>"
+                            " WIN!!<br>" +
+                            linkToResetAndScore()
                             );
       $.ajax({
           url: '/racer/results',
@@ -70,8 +89,6 @@ function player (playerNum, keyBind, playerName) {
     }  
   };
 
-
-// key bind
   player.prototype.unbindKey = function () {
     if ($GAME === false) {
       Mousetrap.unbind(this.keyBind,'keyup');
