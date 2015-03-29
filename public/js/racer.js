@@ -33,7 +33,6 @@ function player (playerNum, keyBind, playerName) {
   }
 
   var getScoreFromServer = function () {
-    event.preventDefault();
     $.ajax({
       url: '/racer/scores',
       type: 'GET',
@@ -77,7 +76,6 @@ function player (playerNum, keyBind, playerName) {
                             " WIN!!<br>" +
                             linkToResetAndScore()
                             );
-      event.preventDefault();
       $.ajax({
           url: '/racer/results',
           type: 'GET',
