@@ -26,7 +26,7 @@ function player (playerNum, keyBind, playerName) {
    };
 
 
-  var linkToResetAndScore = function (argument) {
+  var linkToResetAndScore = function () {
     linkToReset = "<a href=\"javascript\:resetScreen\(\)\;\">Try again   |</a>"
     linkToScore = "<a href=\"javascript\:getScoreFromServer\(\)\;\">   Show Score</a>"
     return linkToReset + linkToScore
