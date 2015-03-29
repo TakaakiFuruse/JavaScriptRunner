@@ -7,3 +7,5 @@ FキーとJキーでキャラクターを前進させて､旗を先にとった
 
 参考:ハイパーオリンピック
 https://www.youtube.com/watch?v=EUkbIL-L3lQ
+
+Heroku: https://js-runner.herokuapp.com/
